@@ -177,7 +177,7 @@ int main(void) {
     if (R > MAX_R) {
         cout << "DEMAIS\n";
     } else {
-        cout << R;
+        cout << R << "\n";
     }
 
     return 0;
