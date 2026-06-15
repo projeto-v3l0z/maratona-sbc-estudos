@@ -50,7 +50,7 @@ typedef uint64_t u64;
 
 constexpr i32 MAX_R = 1e9;
 
-static inline vector<i32> concat(vector<i32>& a, vector<i32>& b) {
+static inline vector<i32> concat(const vector<i32>& a, const vector<i32>& b) {
     vector<i32> result;
     result.reserve(a.size() + b.size());
 
@@ -60,7 +60,7 @@ static inline vector<i32> concat(vector<i32>& a, vector<i32>& b) {
     return result;
 }
 
-static inline i32 find_first_occurrence(vector<i32>& a, vector<i32>& b) {
+static inline i32 find_first_occurrence(const vector<i32>& a, const vector<i32>& b) {
     auto it = search(b.begin(), b.end(), a.begin(), a.end());
 
     if (it == b.end()) {
@@ -71,7 +71,7 @@ static inline i32 find_first_occurrence(vector<i32>& a, vector<i32>& b) {
     return distance(b.begin(), it);
 }
 
-static inline i32 find_minimum_period(vector<i32>& a) {
+static inline i32 find_minimum_period(const vector<i32>& a) {
     i32 L = a.size();
     if (L <= 1) return L;
 
